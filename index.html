@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collision</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js" integrity="sha512-0zGLOFv/+OQ6YfVCSGDQWhrDRx0ONmBqWvs3gI4olm8i6xtKoG1FhEnB4eTaWCVnojyfUDgE8Izeln+mAJAkFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+            color: black;
+        }
+            
+        .cards {
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 2em;
+            display: grid;
+        }
+
+        .card {
+            width: 100%;
+        }
+            
+        @media (min-width: 600px) {
+            .cards { grid-template-columns: repeat(2, 1fr); }
+        }
+            
+        @media (min-width: 1200px) {
+            .cards { grid-template-columns: repeat(4, 1fr); }
+        }
+          
+        * {
+            overflow: hidden;
+            font-family: Onest;
+        }
+
+        #preview {
+            padding-right: 1em;
+            border: 1px solid black;
+            border-right: 0px;
+        }
+
+        .count, .v1Div, .v2Div {
+            font-size: 72px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Please be advised that large values may result in animation crashes and premature stopping of counting.
+      </div>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Mass (Blue):</h2>
+            <input type="text" id="m1"/>
+        </div>
+        <div class="card">
+            <h2>Velocity (Blue):</h2>
+            <input type="text" id="v1"/>
+        </div>
+        <div class="card">
+            <h2>Mass (Red):</h2>
+            <input type="text" id="m2"/>
+        </div>
+        <div class="card">
+            <h2>Velocity (Red):</h2>
+            <input type="text" id="v2"/>
+        </div>
+    </div>
+
+    <hr>
+
+    <canvas id="preview"></canvas>
+
+    <hr>
+
+    <script src="model.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
