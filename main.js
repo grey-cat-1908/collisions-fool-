@@ -77,4 +77,11 @@ addEventListener("input", (event) => {
         input = inputs[i];
         localStorage.setItem(input.id, Number(input.value));
     }
+
+    if (Number(localStorage.getItem("m2")) <= 0) {
+        localStorage.setItem("m2", 1);
+    }
+    if (Number(localStorage.getItem("m1")) <= 0) {
+        localStorage.setItem("m1", 1);
+    }
 });
