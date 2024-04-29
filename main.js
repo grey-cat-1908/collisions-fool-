@@ -57,8 +57,8 @@ function draw() {
       block1.update();
       block2.update();
 
-    block1.move();
-    block2.move();
+      block1.move();
+      block2.move();
     }
   
     block1.build();
