@@ -57,10 +57,8 @@ function draw() {
       block1.update();
       block2.update();
 
-      if (block2.x > 50) {
-        block1.move();
-        block2.move();
-      }
+    block1.move();
+    block2.move();
     }
   
     block1.build();
