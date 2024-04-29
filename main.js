@@ -7,7 +7,7 @@ let v2 = Number(localStorage.getItem("v2")) || -1;
 let m1 = Number(localStorage.getItem("m1")) || 1;
 let v1 = Number(localStorage.getItem("v1")) || 0;
 
-const opt = 10 ** (Math.floor(Math.log10(m2) / 2)- 2);
+const opt = 10 ** 6;
 
 function preload() {
     document.getElementById("m1").value = Number(localStorage.getItem("m1")) || 1;
